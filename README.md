@@ -1,2 +1,2 @@
 # Face_Recognition
-python + _opencv_
+python opencv
