@@ -11,6 +11,7 @@ int take_photo()
     cap.open(0);
     Mat frame;
     int pic_num = 1;
+
     while (1)
     {
         cap >> frame;
@@ -39,13 +40,13 @@ int take_photo()
             waitKey(500);
             destroyWindow(filename);
             pic_num++;
-            if (pic_num == 21)
-            {
-                return 0;
-            }
+            if (pic_num == 21) break;
         }
         imshow("frame", frame);
         waitKey(100);
     }
+
+    destroyWindow("frame");
+
     return 0;
 }
